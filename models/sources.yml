@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: deel_globepay
+    description: This is a replica of the Snowflake database for the Globepay data.
+    database: DEEL_GLOBEPAY
+    schema: RAW
+    tables:
+      - name: acceptance
+        description: One record per accepted transaction.
+      - name: chargeback
+        description: One record per transaction - relates to the chargeback of the transactions in the acceptance table.
