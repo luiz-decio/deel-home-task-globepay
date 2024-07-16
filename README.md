@@ -4,7 +4,7 @@ This repository contains the solution for the Analytics Engineering Challenge. T
 
 - Check out the [dbt docs](https://luiz-decio.github.io/deel-home-task-globepay/#!/overview) for the documentation!
 
-- More detailed documentation with the answers for the questions [here](/docs/deel_home_task_globepay.pdf)!
+- More detailed documentation with the answers for the questions [here](/docs/luiz_decio_deel_home_task_globepay.pdf)!
 
 ## Table of Contents
 
