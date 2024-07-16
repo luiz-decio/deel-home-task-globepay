@@ -1,6 +1,5 @@
 name: Deploy dbt docs to GitHub Pages
 
-
 on:
   push:
     branches:
