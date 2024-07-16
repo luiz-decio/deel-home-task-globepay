@@ -1,11 +1,8 @@
 select
     external_ref as transaction_id,
     status,
-    source,
-    ref,
-    date_time,
+    date_time as transaction_date,
     state,
-    cvv_provided,
     case when amount < 0 then amount * -1 else amount end as amount,
     country,
     currency,
