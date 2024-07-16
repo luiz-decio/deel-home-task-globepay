@@ -2,6 +2,8 @@
 
 This repository contains the solution for the Analytics Engineering Challenge. The project involves ingesting, modeling, and analyzing transaction data using dbt and Snowflake. Below is a detailed explanation of each step taken to complete the task.
 
+Check out the [dbt docs](https://nj890.us1.dbt.com/accounts/70403103936975/develop/70403104131752/docs/index.html#!/overview) for the documentation!
+
 ## Table of Contents
 
 1. [Preliminary Data Exploration](#preliminary-data-exploration)
