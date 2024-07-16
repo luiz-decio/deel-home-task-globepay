@@ -59,6 +59,8 @@ Implemented a macro to dynamically extract exchange rates from a JSON column bas
 
 Generated lineage graphs to visualize data flow and dependencies between models.
 
+![Alt](/../docs/lineage.png)
+
 - **dbt Lineage Graph**: Shows the relationships between raw data sources, staging models, and the fact model.
 
 ## Tips and Macros
