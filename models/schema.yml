@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: stg_acceptance
+    description: "Staging table for Globepay acceptance data."
+    columns:
+      - name: transaction_id
+        description: "Unique identifier for each transaction."
+        tests:
+          - unique
+          - not_null
+      - name: transaction_date
+        description: "The date and time when the transaction was processed."
+        tests:
+          - not_null
+      - name: state
+        description: "Status of the transaction (e.g., accepted, declined)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ACCEPTED', 'DECLINED']
+      - name: amount
+        description: "The amount of the transaction."
+        tests:
+          - not_null
+      - name: currency
+        description: "The currency in which the transaction was made."
+        tests:
+          - not_null
+      - name: country
+        description: "The country of the transaction."
+        tests:
+          - not_null
+
+  - name: stg_chargeback
+    description: "Staging table for Globepay chargeback data."
+    columns:
+      - name: transaction_id
+        description: "Unique identifier for each transaction."
+        tests:
+          - unique
+          - not_null
+      - name: chargeback
+        description: "The status of the chargeback."
+
+  - name: fact_transactions
+    description: "Fact table combining acceptance and chargeback data to provide a comprehensive view of transactions."
+    columns:
+      - name: transaction_id
+        description: "Unique identifier for each transaction."
+        tests:
+          - unique
+          - not_null
+      - name: transaction_date
+        description: "The date and time when the transaction was processed."
+        tests:
+          - not_null
+      - name: state
+        description: "Status of the transaction (e.g., accepted, declined)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ACCEPTED', 'DECLINED']
+      - name: amount
+        description: "The amount of the transaction."
+        tests:
+          - not_null
+      - name: currency
+        description: "The currency in which the transaction was made."
+        tests:
+          - not_null
+      - name: country
+        description: "The country of the transaction."
+        tests:
+          - not_null
+      - name: chargeback
+        description: "The date when the chargeback occurred."
