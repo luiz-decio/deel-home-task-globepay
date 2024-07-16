@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: deel_globepay
+  - name: RAW
     description: "Source data from Globepay."
     database: DEEL_GLOBEPAY
     schema: RAW

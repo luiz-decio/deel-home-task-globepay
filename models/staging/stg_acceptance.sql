@@ -7,4 +7,4 @@ select
     currency,
     parse_json(rates) as exchange_rates
 
-from deel_globepay.raw.acceptance
+from {{ source('RAW', 'acceptance') }}

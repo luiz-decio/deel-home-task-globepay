@@ -10,7 +10,7 @@ with acceptance as (
         currency,
 
         -- Get the USD rate using get_rate macro
-        {{ get_rate('exchange_rates', 'USD') }} as usd_rate
+        {{ get_rate('exchange_rates', 'currency') }} as currency_rate
 
     from {{ ref('stg_acceptance') }}
 ),
@@ -26,6 +26,7 @@ final as (
     select
 
         a.*,
+        a.amount / a.currency_rate as usd_amount,
         c.chargeback,
         current_timestamp() as _insert_date
 
