@@ -2,7 +2,7 @@
 
 This repository contains the solution for the Analytics Engineering Challenge. The project involves ingesting, modeling, and analyzing transaction data using dbt and Snowflake. Below is a detailed explanation of each step taken to complete the task.
 
-Check out the [dbt docs](https://nj890.us1.dbt.com/accounts/70403103936975/develop/70403104131752/docs/index.html#!/overview) for the documentation!
+Check out the [dbt docs](https://luiz-decio.github.io/deel-home-task-globepay/#!/overview) for the documentation!
 
 ## Table of Contents
 
@@ -82,3 +82,4 @@ Generated lineage graphs to visualize data flow and dependencies between models.
 
 - Detailed documentation for each model and macro in `schema.yml`.
 - Includes descriptions, data types, and tests for each column.
+- Added a GitHub actions workflow to update the dbt docs on new deploy.
