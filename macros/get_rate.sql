@@ -1,5 +1,5 @@
-{% macro get_rate(column_name, country_code) %}
+{% macro get_rate(json_column, currency_column) %}
 
-    ({{column_name}}['{{country_code}}']::float)
-
+    json_extract_path_text({{ json_column }}, {{ currency_column }})
+    
 {% endmacro %}
