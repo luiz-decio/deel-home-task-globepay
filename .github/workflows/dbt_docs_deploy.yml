@@ -31,12 +31,11 @@ jobs:
           outputs:
             prod:
               type: snowflake
-              threads: 14
+              threads: 4
               account: ${{ secrets.DBT_SNOWFLAKE_ACCOUNT }}
-              database: analytics
-              role: transformer
-              schema: reporting
-              warehouse: dbt_xs
+              database: DEEL_GLOBEPAY
+              schema: analytics
+              warehouse: DEEL_HOME_TASK_GLOBEPAY
               user: ${{ secrets.DBT_SNOWFLAKE_USER }}
               password: ${{ secrets.DBT_SNOWFLAKE_PASS }}
         " > ~/.dbt/profiles.yml      
